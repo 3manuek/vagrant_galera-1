@@ -2,7 +2,7 @@
 
 sudo yum update
 sudo yum localinstall -y http://www.percona.com/downloads/percona-release/percona-release-0.0-1.x86_64.rpm
-sudo yum install -y Percona-XtraDB-Cluster-server
+sudo yum install -y Percona-XtraDB-Cluster-server wget
 wget http://pkgs.repoforge.org/socat/socat-1.7.1.3-1.el6.rf.x86_64.rpm
 rpm -ivh socat-1.7.1.3-1.el6.rf.x86_64.rpm
 # curl -L http://pkgs.repoforge.org/socat/socat-1.7.1.3-1.el6.rf.x86_64.rpm | rpm -ivh
