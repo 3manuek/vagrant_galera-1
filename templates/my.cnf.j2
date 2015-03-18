@@ -1,0 +1,23 @@
+[mysqld]
+#datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+user=mysql
+# Disabling symbolic-links is recommended to prevent assorted security risks
+symbolic-links=0
+ 
+datadir = /var/lib/mysql
+binlog_format = ROW
+wsrep_cluster_name = threenode
+wsrep_cluster_address = gcomm://192.168.70.2,192.168.70.3,192.168.70.4
+# wsrep_node_address = 192.168.70.2
+wsrep_node_address = {{ ansible_eth1.ipv4.address }}
+wsrep_provider = /usr/lib64/libgalera_smm.so
+wsrep_sst_method = xtrabackup
+wsrep_sst_auth = sst:secret
+innodb_locks_unsafe_for_binlog = 1
+innodb_autoinc_lock_mode = 2
+ 
+[mysqld_safe]
+log-error=/var/log/mysqld.log
+pid-file=/var/run/mysqld/mysqld.pid
+

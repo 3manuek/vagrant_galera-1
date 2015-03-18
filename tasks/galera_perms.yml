@@ -1,0 +1,3 @@
+---
+ - name: configure percona
+   command: mysql -uroot -e "GRANT RELOAD, LOCK TABLES, REPLICATION CLIENT ON *.* TO 'sst'@'localhost' IDENTIFIED BY 'secret'; flush privileges; " 

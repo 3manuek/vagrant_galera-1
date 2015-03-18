@@ -1,0 +1,7 @@
+---
+- name: config galera
+  template: src=my.cnf.j2 dest=/etc/my.cnf
+- name: start galera
+  command: sudo service mysql bootstrap-pxc
+
+   
