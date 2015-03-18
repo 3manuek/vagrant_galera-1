@@ -6,11 +6,16 @@ Extra documentation: https://palominodb.atlassian.net/wiki/display/PDBINT/MySQL+
 
 # Base OS
 
-vagrant box add tungsten_centos5_9 http://tag1consulting.com/files/centos-5.9-x86-64-minimal.box
+> vagrant box add tungsten_centos5_9 http://tag1consulting.com/files/centos-5.9-x86-64-minimal.box
 
 # Initial provisioning
 
-vagrant [up|reload] --provision
+Using:
 
+>  vagrant up
+
+or
+
+>  vagrant --reload provision
 
 
