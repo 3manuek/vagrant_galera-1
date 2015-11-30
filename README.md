@@ -19,3 +19,4 @@ or
 >  vagrant --reload provision
 
 
+# vagrant_galera
